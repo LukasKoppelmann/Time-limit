@@ -16,12 +16,12 @@ public class PlayTimeAbfrage implements CommandExecutor {
             Player player = (Player) sender;
             int gesamt = plugin.getConfig().getInt(player.getName()+ " minutesGesamt");
             int rest = plugin.getConfig().getInt("PlayTimeAllowed", 90) - plugin.getConfig().getInt(player.getName()+ " minutes");
-            player.sendMessage(ChatColor.DARK_RED + "Verbleibende Spielzeit: "+ rest + " min");
-            player.sendMessage(ChatColor.DARK_PURPLE + "Spielzeit Gesamt: " + gesamt);
+            player.sendMessage(ChatColor.DARK_RED + "Playtime left: "+ rest + " min");
+            player.sendMessage(ChatColor.DARK_PURPLE + "Playtime: " + gesamt);
             }
         else {
-            System.out.println("Kein Konsolen Command!");
-            sender.sendMessage("Command nicht verfügbar!");
+            System.out.println("Not available!");
+            sender.sendMessage("Not available!");
         }
 
         return false;
