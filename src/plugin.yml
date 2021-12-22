@@ -1,0 +1,11 @@
+name: Zeitbegrenzung
+version: 3.2
+author: LukasK
+main: de.lukas.main.main
+api-version: 1.13
+
+commands:
+   left:
+     description: Zeigt dir deine verbleibende Spielzeit an
+   addtime:
+     description: Gibt Spieler mehr Zeit

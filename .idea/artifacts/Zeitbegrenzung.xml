@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Zeitbegrenzung">
+    <output-path>$PROJECT_DIR$/../Testserver/plugins</output-path>
+    <root id="archive" name="Zeitbegrenzung.jar">
+      <element id="module-output" name="Zeitbegrenzung" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Plugin Export/src/plugin.yml" />
+    </root>
+  </artifact>
+</component>
