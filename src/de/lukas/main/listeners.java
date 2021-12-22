@@ -27,8 +27,8 @@ public class listeners implements Listener {
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
         int rest = plugin.getConfig().getInt("PlayTimeAllowed", 90) - plugin.getConfig().getInt(player.getName() + " minutes");
-        event.setJoinMessage(ChatColor.GREEN + "Hallo, " + player.getName() + "! Willkommen zurück!");
-        event.getPlayer().sendMessage(ChatColor.DARK_RED + "Verbleibende Spielzeit: " + rest + " min");
+        event.setJoinMessage(ChatColor.GREEN + "Hello, " + player.getName() + "! Welcome back!");
+        event.getPlayer().sendMessage(ChatColor.DARK_RED + "Playtime left: " + rest + " min");
         event.getPlayer().sendMessage(ChatColor.AQUA + "Tipp: /left");
         int vergangen = plugin.getConfig().getInt(event.getPlayer().getName() + " ZeitVer");
         plugin.getConfig().set(event.getPlayer().getName() + " ZeitVer", vergangen);
@@ -41,11 +41,11 @@ public class listeners implements Listener {
         }
         if(plugin.getConfig().getInt(event.getPlayer().getName()+ " minutes") == 90){
             int zeitb = 720 - vergangen;
-            event.getPlayer().kickPlayer(ChatColor.DARK_RED + "Du hast dein Zeitlimit für heute erreicht!Warte: " + zeitb + " min");
+            event.getPlayer().kickPlayer(ChatColor.DARK_RED + "You have reached yout time limit! Wait: " + zeitb + " min");
         }
         if(plugin.getConfig().getInt(event.getPlayer().getName()+ " minutes") >= 90){
             int zeitb = 720 - vergangen;
-            event.getPlayer().kickPlayer(ChatColor.DARK_RED + "Du hast dein Zeitlimit für heute erreicht! Warte: "+ zeitb + " min");
+            event.getPlayer().kickPlayer(ChatColor.DARK_RED + "You have reached yout time limit! Wait: "+ zeitb + " min");
         }
         else{
 
